@@ -284,4 +284,137 @@ $ ls
 'qim qim.txt'   qim2.txt
 
 mutaqim@DESKTOP-RGQN2PB MINGW64 ~/Desktop/Personal/Profession/Project/TESTGIT/testintogit (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        bash.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+mutaqim@DESKTOP-RGQN2PB MINGW64 ~/Desktop/Personal/Profession/Project/TESTGIT/testintogit (master)
+$ git branch                                                                                                            * master
+                                                                                                                        mutaqim@DESKTOP-RGQN2PB MINGW64 ~/Desktop/Personal/Profession/Project/TESTGIT/testintogit (master)
+$ git add branch cubabranch
+fatal: pathspec 'branch' did not match any files
+
+mutaqim@DESKTOP-RGQN2PB MINGW64 ~/Desktop/Personal/Profession/Project/TESTGIT/testintogit (master)
+$ git branch <cubabuat>
+bash: syntax error near unexpected token `newline'
+
+mutaqim@DESKTOP-RGQN2PB MINGW64 ~/Desktop/Personal/Profession/Project/TESTGIT/testintogit (master)
+$ git branch <feature_branch>
+bash: syntax error near unexpected token `newline'
+
+mutaqim@DESKTOP-RGQN2PB MINGW64 ~/Desktop/Personal/Profession/Project/TESTGIT/testintogit (master)
+$ git branch <feature_branc>
+bash: syntax error near unexpected token `newline'
+
+mutaqim@DESKTOP-RGQN2PB MINGW64 ~/Desktop/Personal/Profession/Project/TESTGIT/testintogit (master)
+$ git commit -a -m "Tambah bash punya command untuk panduan"
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        bash.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+mutaqim@DESKTOP-RGQN2PB MINGW64 ~/Desktop/Personal/Profession/Project/TESTGIT/testintogit (master)
+$ git add bash.txt
+
+mutaqim@DESKTOP-RGQN2PB MINGW64 ~/Desktop/Personal/Profession/Project/TESTGIT/testintogit (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   bash.txt
+
+
+mutaqim@DESKTOP-RGQN2PB MINGW64 ~/Desktop/Personal/Profession/Project/TESTGIT/testintogit (master)
+$ git add .
+
+mutaqim@DESKTOP-RGQN2PB MINGW64 ~/Desktop/Personal/Profession/Project/TESTGIT/testintogit (master)
+$ git commit -m "Tambah file untuk rujukan"
+[master 79c4008] Tambah file untuk rujukan
+ 1 file changed, 287 insertions(+)
+ create mode 100644 bash.txt
+
+mutaqim@DESKTOP-RGQN2PB MINGW64 ~/Desktop/Personal/Profession/Project/TESTGIT/testintogit (master)
+$ git remote
+github
+origin
+
+mutaqim@DESKTOP-RGQN2PB MINGW64 ~/Desktop/Personal/Profession/Project/TESTGIT/testintogit (master)
+$ git push github master
+To https://github.com/mutaqim96/testinggit.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/mutaqim96/testinggit.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+mutaqim@DESKTOP-RGQN2PB MINGW64 ~/Desktop/Personal/Profession/Project/TESTGIT/testintogit (master)
+$ git commit -a -m "tambah file bash untuk rujukan"
+On branch master
+nothing to commit, working tree clean
+
+mutaqim@DESKTOP-RGQN2PB MINGW64 ~/Desktop/Personal/Profession/Project/TESTGIT/testintogit (master)
+$ git push origin master
+To https://github.com/mutaqim96/testinggit.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/mutaqim96/testinggit.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+mutaqim@DESKTOP-RGQN2PB MINGW64 ~/Desktop/Personal/Profession/Project/TESTGIT/testintogit (master)
+$ git pull origin master
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), 1.31 KiB | 74.00 KiB/s, done.
+From https://github.com/mutaqim96/testinggit
+ * branch            master     -> FETCH_HEAD
+   562bf7c..238e2fa  master     -> origin/master
+Merge made by the 'recursive' strategy.
+ qim qim.txt | 3 +++
+ 1 file changed, 3 insertions(+)
+
+mutaqim@DESKTOP-RGQN2PB MINGW64 ~/Desktop/Personal/Profession/Project/TESTGIT/testintogit (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+mutaqim@DESKTOP-RGQN2PB MINGW64 ~/Desktop/Personal/Profession/Project/TESTGIT/testintogit (master)
+$ git remote -v
+github  https://github.com/mutaqim96/testinggit.git (fetch)
+github  https://github.com/mutaqim96/testinggit.git (push)
+origin  https://github.com/mutaqim96/testinggit.git (fetch)
+origin  https://github.com/mutaqim96/testinggit.git (push)
+
+mutaqim@DESKTOP-RGQN2PB MINGW64 ~/Desktop/Personal/Profession/Project/TESTGIT/testintogit (master)
+$ git push origin master
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 2.35 KiB | 1.18 MiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+To https://github.com/mutaqim96/testinggit.git
+   238e2fa..194f17d  master -> master
+
+mutaqim@DESKTOP-RGQN2PB MINGW64 ~/Desktop/Personal/Profession/Project/TESTGIT/testintogit (master)
+$ git branch
+* master
+
+mutaqim@DESKTOP-RGQN2PB MINGW64 ~/Desktop/Personal/Profession/Project/TESTGIT/testintogit (master)
+$ git checkout cubabranch
+error: pathspec 'cubabranch' did not match any file(s) known to git
+
+mutaqim@DESKTOP-RGQN2PB MINGW64 ~/Desktop/Personal/Profession/Project/TESTGIT/testintogit (master)
 $
